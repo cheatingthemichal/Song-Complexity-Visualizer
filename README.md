@@ -1,6 +1,4 @@
 # Song-Complexity-Visualizer
-A song visualizer based on its complexity
-
 Load an audio file by clicking "Choose File". You can pause/play, move around in the song, change playback speed, and change volume by using the slider on the bottom of the page.
 
 There are two types of visualizations the program can create. The oscilloscope plots the waveform of the music over time. The amplitude and frequency of the waveform change according to the music. The frequency bar graph shows how the contribution of each frequency changes over time. The length of each bar represents the loudness of a given frequency. The oscilloscope is a lot more fun.
