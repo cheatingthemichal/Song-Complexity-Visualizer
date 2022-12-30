@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Michal Hajlasz Final Project</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <input type="file" id="input" accept="audio/*"/>
+    <output>FFT Size (default is 2048): </output>
+    <input type="range" id="fft" min="0" max="8" value="6" oninput="this.nextElementSibling.value = fft_values[this.value]"/>
+    <output>2048</output>
+    <p></p>
+    <output>Tau [how sparsely do we sample when measuring complexity?] (default is 5): </output>
+    <input type="range" id="tau" min="1" max="10" value="5" oninput="this.nextElementSibling.value = this.value"/>
+    <output>5</output>
+    <p></p>
+    <output>Normalization Constant (default is 90): </output>
+    <input type="range" id="norm" min="10" max="300" value="90" oninput="this.nextElementSibling.value = this.value"/>
+    <output>90</output>
+    <p></p>
+    <form id = "stupid">
+        <output>Memory Mode</output>
+        <input type = "radio" id="off" name = "stupid" value = "off" checked = "checked">
+        <label for="off">off</label>
+        <input type="radio" id="on" name="stupid" value="on">
+        <label for="on">on</label>
+    </form>
+    <form id = "version">
+      <output>Oscilloscope or Bar Graph</output>
+      <input type="radio" id="osc" name="version" value="osc" checked = "checked">
+      <label for="osc">osc</label>
+      <input type = "radio" id="bar" name = "version" value = "bar">
+      <label for="bar">bar</label>
+  </form>
+    <canvas id="canvas"></canvas>
+    <div id="background"></div>
+    <audio id="audio" controls></audio>
+  </body>
+</html>

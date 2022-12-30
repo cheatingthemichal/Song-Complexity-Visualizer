@@ -1,0 +1,60 @@
+/* Some code from:
+https://gg-gina.medium.com/how-to-music-visualizer-web-audio-api-aa007f4ea525 
+*/
+body {
+  background-color: rgb(197, 141, 141);
+}
+
+#input {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+}
+
+#canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+audio {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 25px);
+  z-index: 3;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 100% 7px;
+  z-index: 1;
+  opacity: 0.3;
+  background-color: rgb(197, 141, 141);
+}
+
+input[id="fft"]{
+  margin-top: 50px;
+}
+
+input[type="range"]{
+  z-index: 2;
+  position: relative;
+}
+
+output {
+  z-index: 2;
+  position: relative;
+}
+
+form  {
+  z-index: 2;
+  position: relative;
+}
